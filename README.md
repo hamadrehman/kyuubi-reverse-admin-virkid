@@ -1,1 +1,1 @@
-"# kyuubi-reverse-admin-virkid" 
+# kyuubi-reverse-admin-virkid

@@ -32,7 +32,6 @@ else:
     cl = "cls"
 os.system(cl)
 
-
 def banner():
     print "\t\t*********************************************"
     print "\t\t*                                           *"
@@ -42,14 +41,7 @@ def banner():
     print "\t\t*     ali ahmady , pHaNtOm_X ,Ch3rn0by1     *"
     print "\t\t*********************************************"
 
-
 banner()
-
-
-# def parseYouget(yougetResp):
-
-
-
 
 def fetchYouget(target):
     url = "http://domains.yougetsignal.com/domains.php"

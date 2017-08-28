@@ -15,7 +15,7 @@ found = []
 # Queue
 
 q = Queue.Queue()
-
+useragent = "Mozilla/5.0 (Windows NT 5.1; rv:24.0) Gecko/20100101 Firefox/24.0"
 # parser
 parser = argparse.ArgumentParser(__file__, description="Reverse IP admin finder ./VIRkid @MaDLeeTs")
 parser.add_argument("--timeout", "-t", help="Custom connection timeout", type=float, default=2.0)
@@ -45,7 +45,7 @@ banner()
 
 def fetchYouget(target):
     url = "http://domains.yougetsignal.com/domains.php"
-    useragent = "Mozilla/5.0 (Windows NT 5.1; rv:24.0) Gecko/20100101 Firefox/24.0"
+
     postdata = {'remoteAddress': target, 'key': ''}
     postdata = urllib.urlencode(postdata)
 
@@ -60,7 +60,9 @@ def fetchYouget(target):
 
 def fetchViewDns(target):
     url = "http://viewdns.info/reverseip/?t=1&host=" + target
-    data = urllib2.urlopen(url).read()
+    request = urllib2.Request(url)
+    request.add_header("User-Agent", useragent)
+    data=urllib2.urlopen(request).read()
     results = re.findall('<td>(.+?\..+?)</td>', data)
     return results
 

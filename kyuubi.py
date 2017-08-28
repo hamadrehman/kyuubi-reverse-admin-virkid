@@ -3,7 +3,7 @@
 # Kyubi referrence : #http://img1.wikia.nocookie.net/__cb20120730083419/powerlisting/images/1/1a/Kyuubi-fire-chakra.jpg
 # http://naruto.wikia.com/wiki/Kurama
 # Have fun     :::: MaDLeeTs.com ::::
-# 
+# x
 import urllib2, urllib, socket, argparse, sys, os, threading, Queue, re, httplib, itertools
 import json
 
